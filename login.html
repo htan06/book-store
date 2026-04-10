@@ -7,18 +7,9 @@
     <title>BookStore</title>
     <link rel="stylesheet" href="./bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <script src="./bootstrap/bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
-    <script src="./src/script/data.js"></script>
-    <script src="./src/components/banner.js"></script>
-    <script src="./src/components/card.js"></script>
-    <script src="./src/components/filter.js"></script>
-    <script src="./src/components/listCard.js"></script>
-    <script src="./src/components/section.js"></script>
     <script src="./src/components/loginForm.js"></script>
     <script src="./src/components/registerForm.js"></script>
-    <script src="./src/pages/home.js"></script>
-    <script src="./src/pages/catalog.js"></script>
     <script src="./src/pages/login.js"></script>
-
     <style>
         .bg-cus {
             background-color: #F9F7F2;
@@ -30,18 +21,16 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg bg-cus px-5 sticky-top">
             <div class="container">
-                <a href="/index.html" class="navbar-brand px-3">
+                <a href="#" class="navbar-brand px-3">
                     <img src="./src/static/img/logo.png" alt="Logo" style="width: 150px;">
                 </a>
-                <div class="d-flex-box">
+                <div class="d-flex-box">    
                     <div class="collapse navbar-collapse" id="list-nav-item">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item"><a class="nav-link" href="/" id="home">Trang chủ</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/catalog.html">Sách</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/info.html">Giới thiệu</a></li>
-                            <li class="nav-item">
-                                <Liên class="nav-link" href="contact.httml">Liên hệ</a>
-                            </li>
+                            <li class="nav-item"><a class="catalog-link nav-link" href="/catalog">Sách</a></li>
+                            <li class="nav-item"><a class="nav-link" href="" >Giới thiệu</a></li>
+                            <li class="nav-item"><Liên class="nav-link" href="" >Liên hệ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -55,11 +44,10 @@
                         </svg>
                     </button>
                 </form>
-                <a href="/login.html" class="text-decoration-none text-black me-4">Đăng nhập</a>
                 <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#list-nav-item">
-                    <div class="navbar-toggler-icon"></div>
-                </button>
+                        data-bs-target="#list-nav-item">
+                        <div class="navbar-toggler-icon"></div>
+                    </button>
             </div>
         </nav>
 
@@ -94,7 +82,17 @@
             </div>
         </footer>
         <script>
-            document.getElementById('main').innerHTML = home()
+            document.getElementById('main').innerHTML = login()
+
+            function showRegisterForm() {
+                document.getElementById('loginForm').classList.add('d-none');
+                document.getElementById('registerForm').classList.remove('d-none');
+            }
+
+            function showLoginForm() {
+                document.getElementById('registerForm').classList.add('d-none');
+                document.getElementById('loginForm').classList.remove('d-none');
+            } 
         </script>
 </body>
 

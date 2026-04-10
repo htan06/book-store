@@ -36,3 +36,5 @@ let books = [
         "price": "84.000 đ"
     }
 ]
+
+const logoLink = "./src/static/img/logo.png";
