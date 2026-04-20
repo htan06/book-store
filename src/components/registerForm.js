@@ -7,13 +7,16 @@ function registerForm() {
                             <input type="text" class="form-control" placeholder="Tên đăng nhập">
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" class="form-control" id="email" onblur="checkEmail()" placeholder="Email">
+                            <span id="emailError" class="text-danger"></span>
                         </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control" placeholder="Mật khẩu">
+                            <input type="password" class="form-control" id="registerPassword" onblur="checkPassword()" placeholder="Mật khẩu">
+                            <span id="passwordError" class="text-danger"></span>
                         </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control" placeholder="Xác nhận mật khẩu">
+                            <input type="password" class="form-control" id="confirmPassword" onblur="checkPassword()" placeholder="Xác nhận mật khẩu">
+                            <span id="confirmPasswordError" class="text-danger"></span>
                         </div>
                         <button type="submit" class="btn btn-warning w-100">Đăng ký</button>
                     </form>

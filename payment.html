@@ -7,17 +7,14 @@
     <title>BookStore</title>
     <link rel="stylesheet" href="./bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <script src="./bootstrap/bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
-    <script src="./src/components/loginForm.js"></script>
-    <script src="./src/components/registerForm.js"></script>
-    <script src="./src/pages/login.js"></script>
-    <script src="./src/script/data.js"></script>
-    <script src="./src/components/cardCatalog.js"></script>
-    <script src="./src/components/filter.js"></script>
-    <script src="./src/components/listCard.js"></script>
-    <script src="./src/pages/catalog.js"></script>
-    <script src="./src/components/cart.js"></script>
-    <script src="./src/pages/cart.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="./src/components/address.js"></script>
+    <script src="./src/components/shippingMethod.js"></script>
+    <script src="./src/components/paymentMethod.js"></script>
+    <script src="./src/components/checkOrder.js"></script>
+    <script src="./src/components/confirm.js"></script>
+    <script src="./src/pages/payment.js"></script>
+    <script src="./src/components/successModal.js"></script>
     <style>
         .bg-cus {
             background-color: #F9F7F2;
@@ -38,7 +35,7 @@
                             <li class="nav-item"><a class="nav-link" href="/index.html" id="home">Trang chủ</a></li>
                             <li class="nav-item"><a class="catalog-link nav-link" href="/catalog.html">Sách</a></li>
                             <li class="nav-item"><a class="nav-link" href="" >Giới thiệu</a></li>
-                            <li class="nav-item"><a class="nav-link" href="" >Liên hệ</a></li>
+                            <li class="nav-item"><Liên class="nav-link" href="" >Liên hệ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -89,9 +86,11 @@
                 </div>
             </div>
         </footer>
-        <script>
-            document.getElementById('main').innerHTML = login()
-        </script>
 </body>
 
+<div id="modal"></div>
+<script>
+    document.getElementById('main').innerHTML = payment()
+    document.getElementById('modal').innerHTML = successModal()
+</script>
 </html>

@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookStore</title>
     <link rel="stylesheet" href="./bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <script src="./bootstrap/bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
-    <script src="./src/components/loginForm.js"></script>
-    <script src="./src/components/registerForm.js"></script>
-    <script src="./src/pages/login.js"></script>
     <script src="./src/script/data.js"></script>
     <script src="./src/components/cardCatalog.js"></script>
     <script src="./src/components/filter.js"></script>
     <script src="./src/components/listCard.js"></script>
     <script src="./src/pages/catalog.js"></script>
-    <script src="./src/components/cart.js"></script>
+    <script src="./src/components/chooseAll.js"></script>
+    <script src="./src/components/cartItem.js"></script>
+    <script src="./src/components/totalMoney.js"></script>
     <script src="./src/pages/cart.js"></script>
 
     <style>
@@ -37,8 +37,8 @@
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item"><a class="nav-link" href="/index.html" id="home">Trang chủ</a></li>
                             <li class="nav-item"><a class="catalog-link nav-link" href="/catalog.html">Sách</a></li>
-                            <li class="nav-item"><a class="nav-link" href="" >Giới thiệu</a></li>
-                            <li class="nav-item"><a class="nav-link" href="" >Liên hệ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/info.html">Giới thiệu</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/contact.html">Liên hệ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
             </div>
         </nav>
 
-        <div class="container" id="main"></div>
+        <div class="container py-4" id="main"></div>
 
         <footer class=" px-3 pt-5 bg-cus">
             <div class="container">
@@ -73,8 +73,8 @@
                     <div class="col-md-3 text-left">
                         <h5>Menu</h5>
                         <ul class="navbar-nav me-auto">
-                            <li class="nav-item"><a class="nav-link" href="">Trang chủ</a></li>
-                            <li class="nav-item"><a class="nav-link" href="">Sách</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/index.html">Trang chủ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/catalog.html">Sách</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Giới thiệu</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Liên hệ</a></li>
                         </ul>
@@ -89,9 +89,37 @@
                 </div>
             </div>
         </footer>
-        <script>
-            document.getElementById('main').innerHTML = login()
-        </script>
 </body>
+
+<script>
+    // function formatCurrency(amount) {
+    //     return amount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+    // }
+
+    // const checkAll = document.getElementById('checkAll');
+    // checkAll.addEventListener('change', () => {
+    //     document.querySelectorAll('.item-check').forEach(cb => {
+    //         cb.checked = checkAll.checked;
+    //     });
+    // });
+
+    // document.querySelectorAll('.cart-item').forEach(item => {
+    //     const plus = item.querySelector('.plus');
+    //     const qty = item.querySelector('.qty');
+    //     const minus = item.querySelector('.minus');
+
+    //     plus.onclick = () => {
+    //         qty.value = parseInt(qty.value) + 1;
+    //     }
+
+    //     minus.onclick = () => {
+    //         if(qty.value > 1) {
+    //             qty.value = parseInt(qty.value) - 1;
+    //         }
+    //     }
+    // })
+
+    document.getElementById('main').innerHTML = cart();
+</script>
 
 </html>
