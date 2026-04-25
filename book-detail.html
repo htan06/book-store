@@ -15,6 +15,8 @@
     <script src="./src/components/section.js"></script>
     <script src="./src/pages/home.js"></script>
     <script src="./src/pages/catalog.js"></script>
+    <script src="./src/pages/bookDetails.js"></script>
+    <script src="./src/script/addToCart.js"></script>
 
     <style>
         .bg-cus {
@@ -34,10 +36,11 @@
                     <div class="collapse navbar-collapse" id="list-nav-item">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item"><a class="nav-link" href="/" id="home">Trang chủ</a></li>
-                            <li class="nav-item"><a class="catalog-link nav-link" href="/catalog.html">Sách</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/info.html">Giới thiệu</a></li>
+                            <li class="nav-item"><a class="catalog-link nav-link" data-link="catalog"
+                                    href="/catalog.html">Sách</a></li>
+                            <li class="nav-item"><a class="nav-link" href="">Giới thiệu</a></li>
                             <li class="nav-item">
-                                <Liên class="nav-link" href="contact.httml">Liên hệ</a>
+                                <Liên class="nav-link" href="">Liên hệ</a>
                             </li>
                         </ul>
                     </div>
@@ -53,6 +56,11 @@
                     </button>
                 </form>
                 <a href="login.html" class="text-decoration-none text-black me-4">Đăng nhập</a>
+                <a href="./cart.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                        </svg>
+                </a>
                 <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
                     data-bs-target="#list-nav-item">
                     <div class="navbar-toggler-icon"></div>
@@ -60,75 +68,7 @@
             </div>
         </nav>
 
-        <div class="container" id="main">
-            <div class="row my-4">
-                <div class="col-md-5 d-flex flex-column align-items-center rounded-2 bg-white p-4 sticky-top align-self-start">
-                    <img src="https://cdn1.fahasa.com/media/catalog/product/8/9/8935278605546.jpg" alt="" class="w-75">
-                    <div>
-                        <button class="btn btn-warning">Mua ngay</button>
-                        <button class="btn btn-outline-warning">Thêm vào giỏ hàng</button>
-                    </div>
-                </div>
-                <div class="col-md-7">
-                    <div class="rounded-2 bg-white p-4 w-100 mb-3">
-                        <h6><b>30 Tuổi - Mọi Thứ Chỉ Mới Bắt Đầu</b></h6>
-                        <div class="small">
-                            <div>Nhà cung cấp: aaa</div>
-                            <div>Nhà xuất bản: aaa</div>
-                            <div>Tác giả: aaa</div>
-                            <div>Hình thức bìa: </div>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                            <b class="text-danger fw-bold fs-5">100.000 đ</b>
-                            <p class="text-muted text-decoration-line-through small">135.000 đ</p>
-                            <div class="badge bg-danger rounded-2 px-2 py-1"><b>-30%</b></div>
-                        </div>
-                    </div>
-                    <div class="rounded-2 bg-white p-4 w-100">
-                        <h6 class="mb-4"><b>Thông tin chi tiết</b></h6>
-                        <div class="row gy-1 small">
-
-                            <div class="col-5 text-muted">Mã hàng</div>
-                            <div class="col-7 fw-medium">8935278605546</div>
-
-                            <div class="col-5 text-muted">Nhà cung cấp</div>
-                            <div class="col-7">
-                                <a href="#" class="text-decoration-none">Saigon Books</a>
-                            </div>
-
-                            <div class="col-5 text-muted">Tác giả</div>
-                            <div class="col-7">Lý Thượng Long</div>
-
-                            <div class="col-5 text-muted">NXB</div>
-                            <div class="col-7">Dân Trí</div>
-
-                            <div class="col-5 text-muted">Năm XB</div>
-                            <div class="col-7">2023</div>
-
-                            <div class="col-5 text-muted">Trọng lượng</div>
-                            <div class="col-7">350g</div>
-
-                            <div class="col-5 text-muted">Kích thước</div>
-                            <div class="col-7">20.5 × 14 × 1.7 cm</div>
-
-                            <div class="col-5 text-muted">Số trang</div>
-                            <div class="col-7">332</div>
-
-                            <div class="col-5 text-muted">Hình thức</div>
-                            <div class="col-7">Bìa mềm</div>
-
-                            <div class="col-5 text-muted">Sản phẩm nổi bật</div>
-                            <div class="col-7">
-                                <a href="#" class="text-decoration-none">
-                                    Top 100 sách kỹ năng bán chạy tháng
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="container" id="main"></div>
 
         <footer class=" px-3 pt-5 bg-cus">
             <div class="container">
@@ -159,7 +99,7 @@
             </div>
         </footer>
         <script>
-            // document.getElementById('main').innerHTML = home()
+            document.getElementById('main').innerHTML = bookDetails()
         </script>
 </body>
 
