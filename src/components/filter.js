@@ -1,7 +1,7 @@
 function filter() {
     return `
-    <div class="col-12 col-md-3 p-1">
-                <div class="p-3 h-100 bg-light rounded-2">
+    <div class="col-12 col-md-3 pe-1 pb-1">
+                <div class="p-3 h-100 bg-white rounded-2">
                     <h4>Bộ lọc</h4>
 
                     <form class="d-flex my-2" action="" role="filter">

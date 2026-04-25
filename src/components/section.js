@@ -7,6 +7,8 @@ function section(title, books) {
             <div class="row">
                 ${listCardHtml}
             </div>
-            <button class="catalog-link btn btn-outline-warning w-25" type="button">Xem thêm</button>
+            <a href="./catalog.html">
+                <button class="catalog-link btn btn-outline-warning w-25" type="button">Xem thêm</button>
+            </a>
         </div>`
 }
