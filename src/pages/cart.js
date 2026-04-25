@@ -12,7 +12,7 @@ function cart() {
     for (let i of cart) {
         let book = books.find(b => b.id == i.bookId)
         price += book.price * i.qty
-        totalPrice += book.price * 0.95 * i.qty
+        totalPrice += book.price * 1.05 * i.qty
     }
     console.log(price)
 
